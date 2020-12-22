@@ -65,7 +65,7 @@ class Zabbix():
 
   def post_data(self, info):
     es = Elasticsearch("192.168.10.125")
-    esindex_prefix = "cc-monitor"
+    esindex_prefix = "zabbix"
     esindex = "%s-%s" % (esindex_prefix, time.strftime('%Y.%m.%d'))
     values = []
     info_deepcopy = copy.deepcopy(info)
